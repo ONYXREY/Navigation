@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_utama">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_utama"
+    android:label="HOME"
+    app:startDestination="@id/homeFragment"
+    >
 
-</resources>
+    <fragment
+        android:id="@+id/detailProfileFragment"
+        android:name="com.kevin.navigation.detailProfileFragment"
+        android:label="fragment_detail_profile"
+        tools:layout="@layout/fragment_detail_profile" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kevin.navigation.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            id="@id/action_profileFragment_to_detailProfileFragment"
+            app:destination="@id/detailProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kevin.navigation.homeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.kevin.navigation.settingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>

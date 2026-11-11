@@ -5,14 +5,15 @@
     android:layout_height="match_parent"
     tools:context=".settingFragment"
     android:orientation="vertical"
-    android:background="#F98FF0">
+    android:background="#F98FF0"
+    android:id="@+id/settingFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="SETTING"
-        android:id="@+id/tvSetting"
+
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="70px"/>
